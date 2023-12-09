@@ -1,23 +1,132 @@
+:root {
+  --primary-color:#ff7700;
+  --seccondry-color:#3E3E3E;
+  --text-color: #fff;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
+  margin: auto;
+  max-width: 2200px;
   padding: 0;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  line-height: 1.5;
+  background-color: var(--seccondry-color);
+  color: var(--text-color);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
+header{
+  margin-top: 50px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: 100vh;
+  margin-top: -1%;
 }
 
-p {
-  margin: 0;
+header p {
+  font-size: 18px;
+}
+
+header h1 {
+  font-size: 45px;
+}
+
+header span {
+  color: var(--primary-color);
+}
+
+.left-header {
+  grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.bioimg {
+  clip-path: circle();
+  max-width: 80%;
+  max-height: auto;
+  margin-inline: 10%;
+  z-index: 3;
+}
+
+.right-header {
+  grid-area: 1 / 2 / 2 / 3;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right-header p, h1 {
+  margin: 5px 100px 5px 5px;
+}
+
+.header-text {
+  max-width: 600px;
+}
+
+nav {
+  max-width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  right: 3%;
+  transform: translateY(-50%);
+}
+
+nav img {
+  max-width: 50px;
+  max-height: 50px;
+  padding: 10px;
+  background-color: var(--primary-color);
+  border-radius: 50px;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  nav {
+    top: auto;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 100%;
+    background-color: black;
+    padding: 15px;
+    }
+
+  .header-text p, h1 {
+    margin-right: 25px;
+  }
+
+  header h1 {
+    font-size: 25px;
+  }
+
+}
+
+@media only screen and (max-width: 780px) {
+
+  header p {
+    font-size: 16px;
+  }
+  
+  header h1 {
+    font-size: 35px;
+  }
+
 }
