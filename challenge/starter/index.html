@@ -20,7 +20,7 @@
 </head>
 
 <body>
-  <header>
+  <header id="home">
 
   <div class="left-header">
 
@@ -30,23 +30,23 @@
 
   <div class="right-header">
     <div class="header-text">
-      <h1>Hi there, im <span>Ross</span> and im your future <span>Web Developer</span></h1>
+      <h1>Hi there, im <span>Ross</span> and im your future <span> Full-Stack Web Developer</span></h1>
         <p>
-          It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here,
+          <!-- It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, -->
         </p>
     </div>
   </div>
 
   <nav>
-    <img src="images/home.png"/>
-    <img src="images/home.png"/>
-    <img src="images/home.png"/>
-    <img src="images/home.png"/>
+    <a href="#home"><img src="images/home.png"/></a>
+    <a href="#about-me"><img src="images/about-me.png"/></a>
+    <a href="#my-work"><img src="images/my-work.png"/></a>
+    <a href="#contact-me"><img src="images/contact-me.png#"/></a>
   </nav>
 
   </header>
   <main>
-    <section class="content-section">
+    <section id="about-me" class="content-section">
       <div class="content-grid">
         <div class="content-section-title">
           <h2>About <span>Me</span></h2>
@@ -58,10 +58,10 @@
           </p>
           <h3>My Skills</h3>
           <div class="about-me-progress">
-                <label style="--p:10"> HTML <progress max="100" value="10">10%</progress></label>
-                <label style="--p:40"> CSS <progress max="100" value="40">40%</progress></label>
-                <label style="--p:80"> JavaScript <progress max="100" value="80">80%</progress></label>
-                <label style="--p:100"> React <progress max="100" value="100">100%</progress></label>
+                <label style="--p:70"> HTML <p>70%</p> <progress max="100" value="70">70%</progress></label>
+                <label style="--p:40"> CSS <p>40%</p> <progress max="100" value="40">40%</progress></label>
+                <label style="--p:60"> JavaScript <p>60%</p> <progress max="100" value="60">60%</progress></label>
+                <label style="--p:80"> React <p>80%</p> <progress max="100" value="80">80%</progress></label>
 
           </div>
           <h3>Other Skills</h3>
@@ -86,7 +86,7 @@
 
 
 
-    <section class="content-section">
+    <section id="my-work" class="content-section">
       <div class="content-grid">
         <div class="content-section-title">
           <div>
@@ -101,15 +101,43 @@
                 <p>test</p>
               </figcaption>
             </figure>
-            <figure class="application-card application-card-left">
+            <figure class="application-card">
               <img src="images/02-portfolio-1.jpg"/>
+              <figcaption>
+                <h3>Test</h3>
+                <p>test</p>
+              </figcaption>
             </figure>
-            <figure class="application-card application-card-right">
+            <figure class="application-card bottom-app-card">
               <img src="images/02-portfolio-1.jpg"/>
+              <figcaption>
+                <h3>Test</h3>
+                <p>test</p>
+              </figcaption>
             </figure>
           </div>
         </div>
       </section>
+
+
+
+      <section id="contact-me" class="content-section">
+        <div class="content-grid">
+          <div class="content-section-title">
+            <div>
+              <h2><span>Contact</span> Me</h2>
+            </div>
+          </div>
+          <div class="contact-me">
+            <img src="images/ContactImages/GitHub.png" alt="Github"/>
+            <img src="images/ContactImages/Instergram.png" alt="Instergram"/>
+            <img src="images/ContactImages/Email.png" alt="Email"/>
+            <img src="images/ContactImages/Phone.png" alt="Call"/> 
+          </div>
+        </div>
+      </section>
+
+
     
   </main>
   <footer>
