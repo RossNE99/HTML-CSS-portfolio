@@ -33,7 +33,7 @@ To get the development environment running:
 - `assets/images/`: Contains all images used in the webpage
 
 ## Enduser usage instructions
-There is no special requirements for end users. Simply visit [here](https://rossne99.github.io/) to view the webpage.2
+There is no special requirements for end users. Simply visit [here](https://rossne99.github.io/HTML-CSS-portfolio) to view the webpage.2
 
 ## Features
 - **Fully Responsive:** This webpage uses media querys to ensure that the content fits on any screen size.
@@ -58,9 +58,6 @@ There is no special requirements for end users. Simply visit [here](https://ross
 The following image shows the web application's appearance and functionality:
 
 ![Full Width Screenshot](assets/images/FullWidthScreenshot.jpeg)
-![Half Width Screenshot](assets/images/HalfWithScreenshot.jpeg)
-![Mobile Width Screenshot](assets/images/MobileScreenshot.jpeg)
-
 
 > **Note**: This layout is designed to be fully responive.
 
