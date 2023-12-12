@@ -1,34 +1,47 @@
 :root {
-  --primary-color:#ff7700;
-  --seccondry-color:#3E3E3E;
-  --seccondry-color-darker:#353535;
-  --text-color: #fff;
-  --card-border-radious: 20px;
+  --primary-color:#ff7700; /* Main accent color */
+  --seccondry-color:#3E3E3E; /* Secondary background color */
+  --seccondry-color-darker:#353535; /* Darker shade of secondary color */
+  --text-color: #fff; /* Text color */
+  --card-border-radious: 20px;  /* Border radius for cards */
 }
 
+/* Smooth scrolling behavior for the entire HTML document */
 html {
   scroll-behavior: smooth;
 }
 
+/* Apply box-sizing to all elements for consistent sizing */
 * {
   box-sizing: border-box;
 }
 
+/* Style for link elements */
+a {
+  text-decoration: none; /* Remove default underline */
+  color: var(--text-color); /* Use text color variable */
+  z-index: 10;
+  position: relative;
+  display: inline;
+  height: 100%;
 
+}
 
+/* Define font families for specific heading and paragraph elements */
 h1, h2, h3, h4 {
   font-family: 'Lilita One', sans-serif;
 }
 
 p, label {
   font-family: 'Yanone Kaffeesatz', sans-serif;
-  font-size: 25px;
+  font-size: 25px;  /* Set a default font size for paragraphs and labels */
 }
 
 h3 {
   font-size: 30px;
 }
 
+/* Body styling */
 body {
   margin: auto;
   max-width: 2200px;
@@ -37,6 +50,7 @@ body {
   color: var(--text-color);
 }
 
+/* Header styling */
 header{
   margin-top: 50px;
   width: 100%;
@@ -50,15 +64,17 @@ header{
   margin-bottom: 400px;
 }
 
-
+/* Header h1 styling */
 header h1 {
   font-size: 45px;
 }
 
+/* Header span styling */
 header span {
   color: var(--primary-color);
 }
 
+/* Left header styling */
 .left-header {
   grid-area: 1 / 1 / 2 / 2;
   display: flex;
@@ -68,14 +84,16 @@ header span {
   justify-content: flex-end;
 }
 
+/* Bio image styling */
 .bioimg {
   clip-path: circle();
-  max-width: 80%;
+  max-width: 40%;
   max-height: auto;
   margin-inline: 10%;
   z-index: 3;
 }
 
+/* Right header styling */
 .right-header {
   grid-area: 1 / 2 / 2 / 3;
   display: flex;
@@ -84,14 +102,17 @@ header span {
   justify-content: center;
 }
 
+/* Styling for certain paragraphs and headings within right header */
 .right-header p, h1 {
   margin: 5px 100px 5px 5px;
 }
 
+/* Styling for header text */
 .header-text {
   max-width: 600px;
 }
 
+/* Navigation styling */
 nav {
   max-width: 80px;
   display: flex;
@@ -105,6 +126,7 @@ nav {
   transform: translateY(-50%);
 }
 
+/* Styling for navigation icons */
 nav img {
   max-width: 50px;
   max-height: 50px;
@@ -113,18 +135,22 @@ nav img {
   border-radius: 50px;
 }
 
+/* Setting snap point for about me section */
 #about-me:target {
   padding-top: 10vh;
 }
 
+/* Setting snap point for my work section */
 #my-work:target {
   padding-top: 10vh;
 }
 
+/* Setting snap point for contact me section */
 #contact-me:target {
   padding-top: 10vh;
 }
 
+/* Content section styling */
 .content-section {
   height: 100%;
   width: 100%;
@@ -133,14 +159,16 @@ nav img {
   padding: 0 0 40vh 0;
 }
 
+/* Styling for content section headings */
 .content-section h2 {
   margin: 0px 0px 30px 0px;
 }
 
+/* Styling for content section h3 headings */
 .content-section h3 {
   margin: 0px 0px 0px 0px;
 }
-
+/* Grid layout for content sections */
 .content-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -149,28 +177,33 @@ nav img {
   grid-row-gap: 0px;
   }
 
+/* Styling for content section title and about me section */
 .content-section-title { grid-area: 1 / 1 / 2 / 2; }
 .about-me { grid-area: 2 / 1 / 3 / 2; }
 
+/*styling for about me section */
 .about-me {
   padding-inline: 82px;
   max-width: 1300px;
   margin: auto;
 }
 
+/* Styling for progress bar contaier within about me section */
 .about-me-progress {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
+/* Styling for paragraphs within about me progress */
 .about-me-progress p {
   margin: 10px auto 0px auto;
   font-size: 17px;
-  color: rgb(157, 157, 157)
+  color: rgb(157, 157, 157);
 }
 
-.about-me progress[value] {
+/* Styling for progress bars within about me section */
+.about-me progress {
   --porgressBackground: 
     radial-gradient(50% 50%,var(--primary-color) 98%,#0000) top/10% 10% no-repeat,
     conic-gradient(var(--primary-color) calc(var(--p)*1%),var(--seccondry-color-darker) 0); 
@@ -188,16 +221,20 @@ nav img {
   background: var(--porgressBackground);
   -webkit-mask: radial-gradient(50% 50%,#0000 79%,#000 80% 100%,#0000 102%)
 }
-.about-me progress[value]::-webkit-progress-bar {
+/* Styling for progress bar background in WebKit for better compatabillity */
+.about-me progress::-webkit-progress-bar {
   background: var(--porgressBackground);
 }
-.about-me progress[value]::-webkit-progress-value {
+/* Styling for progress bar value in WebKit */
+.about-me progress::-webkit-progress-value {
   background: #0000;
 }
-.about-me progress[value]::-moz-progress-bar {
+/* Styling for progress bar value in WebKit */
+.about-me progress::-moz-progress-bar {
   background: #0000;
 }
 
+/* Styling for proggress rings within about me section */
 .about-me label {
   font-size: 20px;
   font-weight: bold;
@@ -208,6 +245,7 @@ nav img {
   position: relative;
   margin: 15px;
 }
+/* Styling for (rings) label pseudo-element */
 .about-me label::before {
   content: "";
   position: absolute;
@@ -217,6 +255,7 @@ nav img {
   transform: rotate(calc(var(--p)*3.6deg)) translateY(calc(50% - 160px/2));
 }
 
+/* Styling for other skills section within about me */
 .about-me-other-skills {
   display: flex;
   flex-wrap: wrap;
@@ -227,12 +266,14 @@ nav img {
   margin: auto;
 }
 
+/* Styling for images within other skills section */
 .about-me-other-skills img {
   clip-path: circle();
   height: auto;
   width: 100px;
 }
-  
+
+/* Styling for applications section */
 .applications {
   display: flex;
   flex-wrap: wrap;
@@ -244,10 +285,11 @@ nav img {
   max-width: 1500px;
 }
 
+/* Grid layout for applications section */
 .content-section-title { grid-area: 1 / 1 / 2 / 2; }
 .applications { grid-area: 2 / 1 / 3 / 2; }
 
-
+/* Styling for content section headings */
 .content-section h2 {
   font-size: 40px;
   color: var(--primary-color);
@@ -257,23 +299,31 @@ nav img {
   text-align: center;
 }
 
+/* Styling for spans within content section */
 .content-section span {
   color: var(--text-color);
 }
 
 
+/* Styling for featured application card */
 .featured-application-card {
   margin: 0px 3px -85px 3px;
   border-radius: var(--card-border-radious);
-}
-
-.featured-application-card img {
-  border-radius: var(--card-border-radious);
-  display: block;
   width: 100%;
   height: auto;
 }
 
+/* Styling for images within featured application card */
+.featured-application-card img {
+  border-radius: var(--card-border-radious);
+  display: block;
+  width: 100%;
+  max-height: 828px;
+  object-fit:cover;
+  object-position: top;
+}
+
+/* Styling for captions within featured application card */
 .featured-application-card figcaption {
   position:relative;
   bottom: 89px;  
@@ -282,8 +332,10 @@ nav img {
   border-top: var(--primary-color) solid 5px;
   border-bottom-left-radius: var(--card-border-radious) ;
   border-bottom-right-radius: var(--card-border-radious);
+  z-index: 11;
 }
 
+/* Styling for regular application cards captions  */
 .application-card figcaption {
   position:relative;
   bottom: 93px;  
@@ -292,31 +344,54 @@ nav img {
   border-top: var(--primary-color) solid 5px;
   border-bottom-left-radius: var(--card-border-radious) ;
   border-bottom-right-radius: var(--card-border-radious);
+  z-index:11 ;
 }
 
+/* Styling for headings within featured application cards */
 .featured-application-card figcaption h3 {
   font-size: 30px ;
   margin: 0px 0px 0px 0px;
   padding: 15px 0px 0px 0px;
 }
 
+/* Styling for paragraphs within featured application cards */
 .featured-application-card figcaption p {
   font-size: 25px;
   padding: 0px 0px 10px 0px;
   margin: 0px 0px 0px 0px;
 }
 
+/* Styling for regular application cards */
 .application-card {
   width: 48.5%;
   margin: auto;
   border-radius: var(--card-border-radious);
+  height: 353px;
+
 }
 
+/* Styling for images within regular application cards */
 .application-card img {
   border-radius: var(--card-border-radious);
   width: 100%;
+  height: 353px;
+  max-height: 353px;
+  object-fit:cover;
+  object-position: top;
 }
 
+/* Styling for paragraphs within regular application cards */
+.application-card p {
+  margin: 13px 0px 0px 0px;
+  padding: 0px 0px 5px 0px;
+}
+
+/* Styling for headings within regular application cards */
+.application-card h3 {
+  margin: 7px 0px 0px 0px;
+}
+
+/* Styling for contact me section */
 .contact-me {
   padding-inline: 82px;
   display: flex;
@@ -328,46 +403,64 @@ nav img {
   margin: auto;
 }
 
+/* Styling for images within contact me section */
 .contact-me img {
   clip-path: circle();
   height: auto;
   width: 100px;
 }
 
+/* Additional Styling for contact me section */
+#contact-me {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
 
+
+/* Media query for larger screens */
 @media only screen and (min-width: 1700px) {
 
-  .content-grid {
-    display: grid;
-    grid-template-columns: 0.2fr 1fr;
-    grid-template-rows: 1fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    }
-    
-  .content-section-title { grid-area: 1 / 1 / 2 / 2; }
-  .applications { grid-area: 1 / 2 / 2 / 3; }
-  .about-me {grid-area: 1 / 2 / 2 / 3;}
-  .contact-me {grid-area: 1 / 2 / 2 / 3;}
-
-  .content-section h2 {
-    margin: 0px 30px 0px 0px;
-    text-align: right;
-    text-decoration: none;
+/* Grid layout for content section in larger screens */
+.content-grid {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
   }
 
-  .content-section-title {
-    border-right: var(--primary-color) solid 5px;
-  }
+/* Positioning of different sections in larger screens */
+.content-section-title { grid-area: 1 / 1 / 2 / 2; }
+.applications { grid-area: 1 / 2 / 2 / 3; }
+.about-me {grid-area: 1 / 2 / 2 / 3;}
+.contact-me {grid-area: 1 / 2 / 2 / 3;}
 
-  .applications {
-    padding-inline: 45px;
-  }
+.content-section h2 {
+  margin: 0px 30px 0px 0px;
+  text-align: right;
+  text-decoration: none;
+}
+
+.content-section-title {
+  border-right: var(--primary-color) solid 5px;
+}
+
+.applications {
+  padding-inline: 45px;
+}
+
+.application-card {
+  margin: auto auto 0px auto;
+}
 }
 
 @media only screen and (max-width:1163px) {
   .about-me label {
     margin-inline: 6%;
+  }
+
+  .bioimg {
+    max-width: 80%;
   }
 }
 
@@ -376,6 +469,7 @@ nav img {
     margin-inline: 1%;
     width: 200px;
   }
+
 }
 
 @media only screen and (max-width: 780px) {
@@ -390,6 +484,7 @@ nav img {
 
 }
 
+/* Media query for mobile screens */
 @media only screen and (max-width: 600px) {
 
   nav {
@@ -404,6 +499,7 @@ nav img {
     padding: 15px;
     border-radius: 90px;
     margin: 0px 0px 10px 0px;
+    z-index: 200;
     }
 
   .header-text p, h1 {
@@ -427,7 +523,7 @@ nav img {
   }
 
   .featured-application-card figcaption {
-    bottom: 80px;  
+    bottom: 77px;  
   }
   
   .featured-application-card figcaption h3 {
@@ -465,17 +561,13 @@ nav img {
   .contact-me {
     padding-inline: 15px;
   } 
-
-  .bottom-app-card img {
-    margin-top:-120px;
-  }
-
   .about-me-other-skills {
     max-width: 400px;
   }
 
 }
 
+/* Media query for tiny screens */
 @media only screen and (max-width: 375px) {
   .about-me label {
     margin-inline: 3%;
